@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events Hub</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@600;700&display=swap"
+            rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assests/CSS/index.css">
+</head>
+<body class="event-body">
+
+           <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-graduation-cap">
+                    <path
+                        d="M22 10v6M2 10l10-5 10 5M6 12v6m-4 1v-1a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1m-4-6V8a2 2 0 0 0-2-2v0m-8 4v-2a2 2 0 0 1-2-2v0m-8 4v-2a2 2 0 0 1-2-2v0" />
+                </svg>
+                <span class="ms-2">Campus Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./event.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./feedback.html">Feedback</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center navbar-icons">
+                    <a href="1"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bell">
+                            <path
+                                d="M6 8a6 6 0 0 1 12 0c0 7-3 9-3 9H9s-3-2-3-9" />
+                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                        </svg></a>
+                    <a href="./sign.html"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-user">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="10" r="3" />
+                            <path
+                                d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+                        </svg></a>
+                    <a href="3"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bookmark">
+                            <path
+                                d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>Campus Events</h1>
+            <p>Your central source for all academic, cultural, and sporting events.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="category-filter">Filter by Category</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Departmental">Departmental</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="sort-by">Sort By</label>
+                <select id="sort-by">
+                    <option value="date">Upcoming First</option>
+                    <option value="name">Name</option>
+                    <option value="category">Category</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="search-name">Search by Event Name</label>
+                <input type="text" id="search-name" placeholder="Search events...">
+            </div>
+        </div>
+
+        <div id="events-container" class="events-grid">
+            <!-- Event cards will be inserted by JavaScript -->
+        </div>
+    </main>
+    <div class="pg-footer">
+        <footer class="footer">
+            <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+            </svg>
+            <div class="footer-content container">
+                <div class="footer-content-column">
+                    <div class="footer-logo">
+                        <a class="footer-logo-link text-light text-decoration-none" href="#">
+                            <h4 style="font-weight: 700;">CampusConnect</h4>
+                        </a>
+                    </div>
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name"> Get Started</h2>
+                        <ul class="footer-menu-list">
+                            <li><a href="#">Start</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Installation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name">University</h2>
+                        <ul class="footer-menu-list">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name"> Legal</h2>
+                        <ul class="footer-menu-list">
+                            <li><a href="#">Privacy Notice</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-call-to-action">
+                        <h2 class="footer-call-to-action-title"> Let's Chat</h2>
+                        <a class="footer-call-to-action-button" href="#" target="_self"> Get in Touch </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p class="footer-copyright-text">©2024. | Campus Connect. | All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Your existing footer can go here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add this at the top inside DOMContentLoaded but after defining allEvents
+let bookmarkedEvents = JSON.parse(localStorage.getItem('bookmarkedEvents')) || [];
+
+// Modify renderEvents to add bookmark button and handle bookmark status
+const renderEvents = (eventsToDisplay) => {
+    eventsContainer.innerHTML = '';
+    if (eventsToDisplay.length === 0) {
+        eventsContainer.innerHTML = "<p class='no-events-message' style='color: var(--dark-teal); text-align: center;'>No events match your criteria.</p>";
+        return;
+    }
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    eventsToDisplay.forEach(event => {
+        const eventCard = document.createElement('div');
+        eventCard.className = 'event-card';
+        const eventDate = new Date(event.date);
+        if (eventDate < today) {
+            eventCard.style.opacity = '0.7';
+        }
+
+        // Check if this event is bookmarked
+        const isBookmarked = bookmarkedEvents.includes(event.id);
+
+        eventCard.innerHTML = `
+            <div class="event-card-content">
+                <span class="event-category">${event.category}</span>
+                <h2 class="event-name">${event.name}</h2>
+                <div class="event-details">
+                    <p class="event-detail">${calendarIcon} <span>${formatDateTime(event.date, event.startTime, event.endTime)}</span></p>
+                    <p class="event-detail">${venueIcon} <span>${event.venue}</span></p>
+                </div>
+                <p class="event-description">${event.description}</p>
+                <button class=" bookmark-btn" aria-label="Bookmark event" style="background:none; border:none; cursor:pointer;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="${isBookmarked ? 'orange' : 'none'}" stroke="orange" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" class="bookmark-icon">
+                        <path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </button>
+            </div>
+        `;
+
+        // Add event listener to bookmark button
+        const bookmarkBtn = eventCard.querySelector('.bookmark-btn');
+        bookmarkBtn.addEventListener('click', () => {
+            if (bookmarkedEvents.includes(event.id)) {
+                // Remove from bookmarks
+                bookmarkedEvents = bookmarkedEvents.filter(id => id !== event.id);
+            } else {
+                // Add to bookmarks
+                bookmarkedEvents.push(event.id);
+            }
+            localStorage.setItem('bookmarkedEvents', JSON.stringify(bookmarkedEvents));
+            updateDisplay(); // re-render to update bookmark icons
+        });
+
+        eventsContainer.appendChild(eventCard);
+    });
+};
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // SCRIPT FOR ACTIVE NAVIGATION LINK
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href').split('/').pop();
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+    
+            // ORIGINAL SCRIPT FOR EVENTS PAGE
+            const eventsContainer = document.getElementById('events-container');
+            const categoryFilter = document.getElementById('category-filter');
+            const sortBy = document.getElementById('sort-by');
+            const searchInput = document.getElementById('search-name');
+    
+            let allEvents = [];
+    
+            const calendarIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0h18M-7.5 12h29.25" /></svg>`;
+            const venueIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1119.5 0z" /></svg>`;
+    
+            const fetchEvents = async () => {
+                try {
+                    const response = await fetch('./assests/js/events.json');
+                    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                    allEvents = await response.json();
+                } catch (error) {
+                    console.error("Could not fetch events, using placeholder data:", error);
+                    allEvents = [
+                        { "id": 1, "name": "Annual Tech Symposium", "date": "2025-10-22", "startTime": "09:00", "endTime": "17:00", "venue": "Main Auditorium", "category": "Academic", "description": "A showcase of the latest in technology and innovation from our students and faculty." },
+                        { "id": 2, "name": "Cultural Night Gala", "date": "2025-11-15", "startTime": "18:30", "endTime": "22:00", "venue": "University Grand Hall", "category": "Cultural", "description": "An evening of music, dance, and drama celebrating the diverse cultures of our student body." },
+                        { "id": 3, "name": "Inter-Departmental Cricket Tournament", "date": "2025-09-30", "startTime": "10:00", "endTime": "16:00", "venue": "University Sports Ground", "category": "Sports", "description": "Witness the thrilling final match between the top two department teams." }
+                    ];
+                } finally {
+                    updateDisplay();
+                }
+            };
+    
+            const formatDateTime = (date, startTime, endTime) => {
+                const eventDate = new Date(`${date}T${startTime}`);
+                const endDate = new Date(`${date}T${endTime}`);
+                const dateOptions = { day: 'numeric', month: 'short', year: 'numeric' };
+                const timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
+                const formattedDate = eventDate.toLocaleDateString('en-US', dateOptions);
+                const formattedStartTime = eventDate.toLocaleTimeString('en-US', timeOptions);
+                const formattedEndTime = endDate.toLocaleTimeString('en-US', timeOptions);
+                return `${formattedDate}, ${formattedStartTime} – ${formattedEndTime}`;
+            };
+    
+            const renderEvents = (eventsToDisplay) => {
+                eventsContainer.innerHTML = '';
+                if (eventsToDisplay.length === 0) {
+                    eventsContainer.innerHTML = "<p class='no-events-message' style='color: var(--dark-teal); text-align: center;'>No events match your criteria.</p>";
+                    return;
+                }
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                eventsToDisplay.forEach(event => {
+                    const eventCard = document.createElement('div');
+                    eventCard.className = 'event-card';
+                    const eventDate = new Date(event.date);
+                    if (eventDate < today) {
+                        eventCard.style.opacity = '0.7';
+                    }
+                    eventCard.innerHTML = `
+                        <div class="event-card-content">
+                            <span class="event-category">${event.category}</span>
+                            <h2 class="event-name">${event.name}</h2>
+                            <div class="event-details">
+                                <p class="event-detail">${calendarIcon} <span>${formatDateTime(event.date, event.startTime, event.endTime)}</span></p>
+                                <p class="event-detail">${venueIcon} <span>${event.venue}</span></p>
+                            </div>
+                            <p class="event-description">${event.description}</p>
+                        </div>
+                    `;
+                    eventsContainer.appendChild(eventCard);
+                });
+            };
+    
+            const updateDisplay = () => {
+                let processedEvents = [...allEvents];
+                const selectedCategory = categoryFilter.value;
+                if (selectedCategory !== 'all') {
+                    processedEvents = processedEvents.filter(event => event.category === selectedCategory);
+                }
+                const searchQuery = searchInput.value.toLowerCase();
+                if (searchQuery) {
+                    processedEvents = processedEvents.filter(event => event.name.toLowerCase().includes(searchQuery));
+                }
+                const sortValue = sortBy.value;
+                switch (sortValue) {
+                    case 'date':
+                        const now = new Date();
+                        now.setHours(0, 0, 0, 0);
+                        const futureEvents = processedEvents.filter(event => new Date(event.date) >= now);
+                        const pastEvents = processedEvents.filter(event => new Date(event.date) < now);
+                        futureEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+                        pastEvents.sort((a, b) => new Date(b.date) - new Date(a.date));
+                        processedEvents = [...futureEvents, ...pastEvents];
+                        break;
+                    case 'name':
+                        processedEvents.sort((a, b) => a.name.localeCompare(b.name));
+                        break;
+                    case 'category':
+                        processedEvents.sort((a, b) => {
+                            if (a.category.localeCompare(b.category) !== 0) {
+                                return a.category.localeCompare(b.category);
+                            }
+                            return a.name.localeCompare(b.name);
+                        });
+                        break;
+                }
+                renderEvents(processedEvents);
+            };
+    
+            categoryFilter.addEventListener('change', updateDisplay);
+            sortBy.addEventListener('change', updateDisplay);
+            searchInput.addEventListener('input', updateDisplay);
+            fetchEvents();
+        });
+      </script>
+</body>
+</html>

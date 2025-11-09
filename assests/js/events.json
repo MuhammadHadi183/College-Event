@@ -1,0 +1,112 @@
+[
+    {
+      "id": 1,
+      "name": "Annual Tech Symposium 2025",
+      "date": "2025-10-22",
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "venue": "Main Auditorium",
+      "description": "A full-day event showcasing the latest in technology and innovation, with guest speakers from top tech companies.",
+      "category": "Academic"
+    },
+    {
+      "id": 2,
+      "name": "Inter-Departmental Cricket Tournament",
+      "date": "2025-10-15",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "venue": "University Sports Ground",
+      "description": "The most anticipated sports event of the year. Watch departments battle it out for the championship trophy.",
+      "category": "Sports"
+    },
+    {
+      "id": 3,
+      "name": "Cultural Night: Rhythms of Heritage",
+      "date": "2025-11-05",
+      "startTime": "18:00",
+      "endTime": "21:00",
+      "venue": "Open Air Theater",
+      "description": "An evening of music, dance, and drama celebrating cultural diversity within our student community.",
+      "category": "Cultural"
+    },
+    {
+      "id": 4,
+      "name": "CS Department Project Exhibition",
+      "date": "2025-11-20",
+      "startTime": "11:00",
+      "endTime": "15:00",
+      "venue": "Lab 302 & 304",
+      "description": "Final year students from the Computer Science department present their innovative software and hardware projects.",
+      "category": "Departmental"
+    },
+    {
+      "id": 5,
+      "name": "Guest Lecture: AI in Modern Medicine",
+      "date": "2025-09-01",
+      "startTime": "14:00",
+      "endTime": "15:30",
+      "venue": "Lecture Hall 5",
+      "description": "A guest lecture by a leading expert on the transformative impact of Artificial Intelligence in healthcare.",
+      "category": "Academic"
+    },
+    {
+      "id": 6,
+      "name": "University Music Fest 'Wavelength'",
+      "date": "2026-01-10",
+      "startTime": "17:00",
+      "endTime": "22:00",
+      "venue": "Central Courtyard",
+      "description": "Join us for an electrifying night of live music performances from student bands and local artists.",
+      "category": "Cultural"
+    },
+    {
+      "id": 7,
+      "name": "Alumni Homecoming Gala 2025",
+      "date": "2025-12-18",
+      "startTime": "19:00",
+      "endTime": "23:00",
+      "venue": "Grand Ballroom",
+      "description": "A chance for alumni to reconnect, network, and reminisce about their time at the university.",
+      "category": "Departmental"
+    },
+    {
+      "id": 8,
+      "name": "Annual Marathon 'Run for a Cause'",
+      "date": "2025-08-20",
+      "startTime": "07:00",
+      "endTime": "10:00",
+      "venue": "Campus Main Gate",
+      "description": "Participate in our annual marathon to promote health and fitness while supporting a charitable cause.",
+      "category": "Sports"
+    },
+    {
+        "id": 9,
+        "name": "Annual Cycle Race'Cycle to Get '",
+        "date": "2027-08-1",
+        "startTime": "07:00",
+        "endTime": "10:00",
+        "venue": "Campus Main Gate",
+        "description": "Participate in our annual Cycle Race to promote health and fitness while supporting a charitable cause.",
+        "category": "Sports"
+      },
+      {
+      "id": 10,
+      "name": "Annual Marathon 'Run for a Cause'",
+      "date": "2027-08-2",
+      "startTime": "07:00",
+      "endTime": "10:00",
+      "venue": "Campus Main Gate",
+      "description": "Participate in our annual marathon to promote health and fitness while supporting a charitable cause.",
+      "category": "Sports"
+    },
+    {
+        "id": 11,
+        "name": "TechFest 2025''",
+        "date": "2025-08-20",
+        "startTime": "07:00",
+        "endTime": "10:00",
+        "venue": "Campus Main Gate",
+        "description": "TechFest is a vibrant technology festival celebrating innovation, learning, competitions, workshops, and networking opportunities.",
+        "category": "Academic"
+      }
+  ]

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Campus Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assests/CSS/index.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-graduation-cap">
+                    <path
+                        d="M22 10v6M2 10l10-5 10 5M6 12v6m-4 1v-1a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1m-4-6V8a2 2 0 0 0-2-2v0m-8 4v-2a2 2 0 0 1-2-2v0m-8 4v-2a2 2 0 0 1-2-2v0" />
+                </svg>
+                <span class="ms-2">Campus Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./event.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./feedback.html">Feedback</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center navbar-icons">
+                    <a href="1"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bell">
+                            <path
+                                d="M6 8a6 6 0 0 1 12 0c0 7-3 9-3 9H9s-3-2-3-9" />
+                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                        </svg></a>
+                    <a href="./sign.html"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-user">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="10" r="3" />
+                            <path
+                                d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+                        </svg></a>
+                    <a href="3"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bookmark">
+                            <path
+                                d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header">
+        <h1>Event Gallery</h1>
+        <p>Memories From Our Campus Life</p>
+    </header>
+    <div class="container my-5">
+        <div class="gallery-filters text-center mb-5">
+          <div id="gallery-year-filter-btns" class="gallery-filter-group">
+            <button class="gallery-filter-btn active" data-year="all">All Years</button>
+            <button class="gallery-filter-btn" data-year="2024-25">2024–25</button>
+            <button class="gallery-filter-btn" data-year="2023-24">2023–24</button>
+            <button class="gallery-filter-btn" data-year="2022-23">2022–23</button>
+          </div>
+          <div id="gallery-category-filter-btns" class="gallery-filter-group mt-3">
+            <button class="gallery-filter-btn active" data-category="all">All Categories</button>
+            <button class="gallery-filter-btn" data-category="Technical">Technical</button>
+            <button class="gallery-filter-btn" data-category="Cultural">Cultural</button>
+            <button class="gallery-filter-btn" data-category="Sports">Sports</button>
+          </div>
+        </div>
+    
+        <div class="row g-4" id="gallery-grid"></div>
+      </div>
+
+    <div class="pg-footer">
+        <footer class="footer">
+            <svg class="footer-wave-svg" xmlns="http://www.w.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+            </svg>
+            <div class="footer-content container">
+                <div class="footer-content-column">
+                    <div class="footer-logo">
+                        <a class="footer-logo-link text-light text-decoration-none" href="#">
+                            <h4 style="font-weight: 700;">CampusConnect</h4>
+                        </a>
+                    </div>
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name"> Get Started</h2>
+                        <ul class="footer-menu-list">
+                            <li><a href="#">Start</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Installation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name">University</h2>
+                        <ul class="footer-menu-list">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name"> Legal</h2>
+                        <ul class="footer-menu-list">
+                            <li><a href="#">Privacy Notice</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-call-to-action">
+                        <h2 class="footer-call-to-action-title"> Let's Chat</h2>
+                        <a class="footer-call-to-action-button" href="#" target="_self"> Get in Touch </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p class="footer-copyright-text">©2024. | Campus Connect. | All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // --- ACTIVE NAVIGATION LINK SCRIPT ---
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        navLinks.forEach(link => {
+          if (link.getAttribute('href').includes('gallery.html')) {
+            link.classList.add('active');
+          }
+        });
+  
+        const galleryGrid = document.getElementById('gallery-grid');
+        const yearFilterContainer = document.getElementById('gallery-year-filter-btns');
+        const categoryFilterContainer = document.getElementById('gallery-category-filter-btns');
+  
+        let allImages = [];
+        let currentYearFilter = 'all';
+        let currentCategoryFilter = 'all';
+  
+        // 1. Fetch gallery data from JSON
+        fetch('./assests/js/gallery-data.json')
+          .then(response => response.json())
+          .then(data => {
+            allImages = data;
+            renderGallery(); // Initial render
+          })
+          .catch(error => console.error('Error loading gallery data:', error));
+  
+        // 2. Render filtered gallery with bookmark icons
+        function renderGallery() {
+  let filteredImages = allImages;
+
+  if (currentYearFilter !== 'all') {
+    filteredImages = filteredImages.filter(img => img.year === currentYearFilter);
+  }
+  if (currentCategoryFilter !== 'all') {
+    filteredImages = filteredImages.filter(img => img.category === currentCategoryFilter);
+  }
+
+  // Bookmarks as full objects
+  const bookmarks = JSON.parse(localStorage.getItem('bookmarkedImages') || '[]');
+  const bookmarkedIds = bookmarks.map(item => item.id);
+
+  galleryGrid.innerHTML = filteredImages.map(item => {
+    const isBookmarked = bookmarkedIds.includes(item.id);
+    return `
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="gallery-item card h-100">
+          <button class="bookmark-btn ${isBookmarked ? 'active' : ''}" data-id="${item.id}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M19 21l-7-4-7 4V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+            </svg>
+          </button>
+          <img src="${item.src}" alt="${item.title}" class="gallery-img img-fluid" />
+          <div class="gallery-caption p-3">
+            <h5 class="gallery-title">${item.title}</h5>
+            <p class="gallery-meta">${item.category} - ${item.year}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+        // 3. Year filter click
+        yearFilterContainer.addEventListener('click', function (e) {
+          if (e.target.matches('.gallery-filter-btn')) {
+            yearFilterContainer.querySelector('.active')?.classList.remove('active');
+            e.target.classList.add('active');
+            currentYearFilter = e.target.dataset.year;
+            renderGallery();
+          }
+        });
+  
+        // 4. Category filter click
+        categoryFilterContainer.addEventListener('click', function (e) {
+          if (e.target.matches('.gallery-filter-btn')) {
+            categoryFilterContainer.querySelector('.active')?.classList.remove('active');
+            e.target.classList.add('active');
+            currentCategoryFilter = e.target.dataset.category;
+            renderGallery();
+          }
+        });
+  
+       
+      // Bookmark button toggle
+galleryGrid.addEventListener('click', function (e) {
+  const btn = e.target.closest('.bookmark-btn');
+  if (!btn) return;
+
+  const imageId = btn.dataset.id;
+  // Get bookmarks (array of objects)
+  let bookmarks = JSON.parse(localStorage.getItem('bookmarkedImages') || '[]');
+
+  // Check if this image is already bookmarked by checking id in objects
+  const index = bookmarks.findIndex(item => item.id === imageId);
+
+  if (index > -1) {
+    // Remove bookmark
+    bookmarks.splice(index, 1);
+    btn.classList.remove('active');
+  } else {
+    // Find the full image object from allImages by id
+    const imageObj = allImages.find(item => item.id === imageId);
+    if (imageObj) {
+      bookmarks.push(imageObj);
+      btn.classList.add('active');
+    }
+  }
+
+  localStorage.setItem('bookmarkedImages', JSON.stringify(bookmarks));
+});
+
+        });
+    </script>
+  </body>
+  </html>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "src": "./images/night.png",
+    "title": "Cultural Night",
+    "year": "2024-25",
+    "category": "Cultural"
+  },
+  {
+    "id": "2",
+    "src": "./images/code-storm.png",
+    "title": "CodeStorm Hackathon",
+    "year": "2024-25",
+    "category": "Technical"
+  },
+  {
+    "id": "3",
+    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqAzI2cdpxbAmX7sAN8jCblTSePO9s0R16hg&s",
+    "title": "Inter-College Sports Meet",
+    "year": "2024-25",
+    "category": "Sports"
+  },
+  {
+    "id": "4",
+    "src": "./images/spring gala.png",
+    "title": "Spring Gala",
+    "year": "2023-24",
+    "category": "Cultural"
+  },
+  {
+    "id": "5",
+    "src": "./images/Project Exhibition1.png",
+    "title": "Project Exhibition",
+    "year": "2023-24",
+    "category": "Technical"
+  },
+  {
+    "id": "6",
+    "src": "./images/Football.png",
+    "title": "Annual Football Match",
+    "year": "2023-24",
+    "category": "Sports"
+  },
+  {
+    "id": "7",
+    "src": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-4.0.3&q=80&w=800",
+    "title": "Welcome Freshers' Concert",
+    "year": "2022-23",
+    "category": "Cultural"
+  },
+  {
+    "id": "8",
+    "src": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&q=80&w=800",
+    "title": "Robotics Workshop",
+    "year": "2022-23",
+    "category": "Technical"
+  },
+  {
+    "id": "9",
+    "src": "./images/cricket.png",
+    "title": "Cricket Tournament Final",
+    "year": "2022-23",
+    "category": "Sports"
+  }
+]
